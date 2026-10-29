@@ -1,0 +1,1 @@
+One-time trigger to import MohamadOday/iris-gallery into branch import/iris-gallery. The import workflow removes this file from the import branch when replacing its contents.
