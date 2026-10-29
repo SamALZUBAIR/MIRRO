@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#151515">
+<meta name="description" content="معاينة تفاعلية لواجهة تطبيق MIRRO Gallery على الهاتف">
+<title>MIRRO — معاينة المعرض</title>
+<style>
+:root{color-scheme:dark;--bg:#111;--panel:#191919;--panel2:#222;--line:#303030;--text:#f5f5f5;--muted:#a4a4a4;--accent:#d9e7d1;--ink:#20251e}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#0c0c0c;color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}body{display:flex;justify-content:center;padding:0 12px 24px}.phone{width:100%;max-width:460px;min-height:100vh;background:var(--bg);position:relative;overflow:hidden;border-inline:1px solid #242424}.top{padding:22px 19px 13px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px}.logo{width:39px;height:39px;border-radius:14px;background:var(--accent);color:#1b2119;display:grid;place-items:center;font-weight:900;font-size:21px;letter-spacing:-2px}.brand h1{font-size:21px;line-height:1;margin:0;letter-spacing:1.6px}.brand p{margin:5px 0 0;color:var(--muted);font-size:11px}.iconbtn{border:1px solid var(--line);color:#eee;background:#1c1c1c;width:41px;height:41px;border-radius:14px;font-size:19px;display:grid;place-items:center;cursor:pointer}.greeting{padding:14px 20px 18px}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.5px}.greeting h2{font-size:27px;margin:6px 0 4px;letter-spacing:-.7px}.greeting p{color:var(--muted);font-size:13px;margin:0}.search{margin:0 18px 19px;display:flex;align-items:center;gap:9px;background:#1b1b1b;border:1px solid #292929;border-radius:15px;padding:0 13px;height:48px}.search span{color:#aaa;font-size:18px}.search input{width:100%;background:transparent;border:0;outline:0;color:#fff;font:inherit;font-size:13px}.section{padding:0 18px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}.sectionhead h3{margin:0;font-size:16px}.sectionhead button{border:0;background:transparent;color:#b9cbb0;font:inherit;font-size:12px;cursor:pointer}.albumrow{display:flex;gap:11px;overflow:auto;padding:1px 0 8px;scrollbar-width:none}.album{flex:0 0 128px;min-width:0;background:#1a1a1a;border:1px solid #292929;border-radius:16px;padding:8px;text-align:right;cursor:pointer;color:inherit}.albumcover{height:82px;border-radius:11px;overflow:hidden;position:relative;background:#303030}.albumcover img{width:100%;height:100%;object-fit:cover;display:block}.albumcover .count{position:absolute;bottom:6px;left:6px;background:#111c;color:white;padding:3px 6px;border-radius:7px;font-size:10px}.album strong{display:block;margin:8px 2px 2px;font-size:12px}.album small{color:var(--muted);font-size:10px;margin:0 2px}.media-section{padding-top:19px}.filterbar{display:flex;gap:7px;margin-bottom:13px}.filter{border:1px solid #333;background:#1a1a1a;color:#b7b7b7;border-radius:999px;padding:8px 15px;font:inherit;font-size:12px;cursor:pointer}.filter.active{background:var(--accent);border-color:var(--accent);color:#1b2119;font-weight:700}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.tile{aspect-ratio:1/1.16;border-radius:9px;overflow:hidden;background:#222;position:relative;border:0;padding:0;cursor:pointer}.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}.tile:active img{transform:scale(.97)}.tile .play{position:absolute;top:7px;left:7px;background:#111a;border-radius:20px;padding:3px 6px;font-size:11px}.tile.hidden{display:none}.empty{display:none;color:var(--muted);font-size:13px;text-align:center;padding:35px 10px}.bottomnav{position:sticky;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));margin-top:18px;background:#151515ed;border-top:1px solid #292929;backdrop-filter:blur(12px)}.navitem{border:0;background:transparent;color:#888;display:flex;flex-direction:column;align-items:center;gap:5px;font:inherit;font-size:10px;cursor:pointer;padding:5px}.navitem span:first-child{font-size:19px}.navitem.active{color:var(--accent)}.notice{margin:14px 18px 0;padding:10px 12px;border:1px solid #343c31;background:#1c211a;border-radius:12px;color:#d4e1ce;font-size:11px;line-height:1.7}.modal{position:fixed;inset:0;background:#000d;display:none;align-items:center;justify-content:center;padding:20px;z-index:5}.modal.open{display:flex}.viewer{width:min(100%,430px);background:#191919;border:1px solid #333;border-radius:18px;padding:10px}.viewer img{width:100%;max-height:70vh;object-fit:contain;border-radius:12px;display:block}.viewerhead{display:flex;align-items:center;justify-content:space-between;padding:5px 3px 10px}.viewerhead button{background:#292929;color:#fff;border:0;border-radius:10px;padding:8px 12px;cursor:pointer}.footer{text-align:center;color:#666;font-size:10px;padding:13px 0 3px}@media(min-width:700px){body{padding-top:24px}.phone{min-height:calc(100vh - 48px);border:1px solid #303030;border-radius:28px;box-shadow:0 20px 80px #0008}.bottomnav{bottom:0}} 
+</style>
+</head>
+<body>
+<main class="phone">
+<header class="top">
+<div class="brand"><div class="logo">M.</div><div><h1>MIRRO</h1><p>معرضك، بطريقتك</p></div></div>
+<button class="iconbtn" id="settings" aria-label="الإعدادات" title="الإعدادات">⚙</button>
+</header>
+<section class="greeting"><div class="eyebrow">مساحة صورك الشخصية</div><h2>معرض الصور</h2><p>كل لحظاتك في مكان واحد.</p></section>
+<label class="search"><span>⌕</span><input id="search" placeholder="ابحث في الصور والألبومات…" autocomplete="off"><span>☷</span></label>
+<section class="section">
+<div class="sectionhead"><h3>ألبوماتك</h3><button id="allAlbums">عرض الكل ↙</button></div>
+<div class="albumrow">
+<button class="album" data-album="كل الصور"><div class="albumcover"><img loading="lazy" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=360&h=240&fit=crop" alt="مناظر طبيعية"><span class="count">248</span></div><strong>كل الصور</strong><small>248 عنصرًا</small></button>
+<button class="album" data-album="الكاميرا"><div class="albumcover"><img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=360&h=240&fit=crop" alt="طبيعة"><span class="count">86</span></div><strong>الكاميرا</strong><small>86 صورة</small></button>
+<button class="album" data-album="المفضلة"><div class="albumcover"><img loading="lazy" src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=360&h=240&fit=crop" alt="غروب"><span class="count">24</span></div><strong>المفضلة</strong><small>24 صورة</small></button>
+<button class="album" data-album="رحلات"><div class="albumcover"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=360&h=240&fit=crop" alt="جبال"><span class="count">39</span></div><strong>رحلات</strong><small>39 صورة</small></button>
+</div>
+</section>
+<section class="section media-section">
+<div class="sectionhead"><h3 id="mediaTitle">الأحدث</h3><button id="sort">الأحدث أولًا⌄</button></div>
+<div class="filterbar" role="group" aria-label="تصفية الصور">
+<button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="photo">الصور</button><button class="filter" data-filter="video">الفيديو</button>
+</div>
+<div class="grid" id="grid">
+<button class="tile" data-type="photo" data-name="جبال وضباب"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=420&h=500&fit=crop" alt="جبال وضباب"></button>
+<button class="tile" data-type="photo" data-name="بحيرة"><img loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=420&h=500&fit=crop" alt="بحيرة بين الجبال"></button>
+<button class="tile" data-type="video" data-name="موج البحر"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=420&h=500&fit=crop" alt="شاطئ البحر"><span class="play">▶ 0:18</span></button>
+<button class="tile" data-type="photo" data-name="غابة خضراء"><img loading="lazy" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=420&h=500&fit=crop" alt="غابة خضراء"></button>
+<button class="tile" data-type="photo" data-name="سماء الغروب"><img loading="lazy" src="https://images.unsplash.com/photo-1472120435266-53107fd0c44a?w=420&h=500&fit=crop" alt="سماء الغروب"></button>
+<button class="tile" data-type="photo" data-name="صحراء"><img loading="lazy" src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=420&h=500&fit=crop" alt="كثبان رملية"></button>
+<button class="tile" data-type="video" data-name="شلال"><img loading="lazy" src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=420&h=500&fit=crop" alt="شلال"><span class="play">▶ 0:12</span></button>
+<button class="tile" data-type="photo" data-name="زهور"><img loading="lazy" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=420&h=500&fit=crop" alt="زهور ملونة"></button>
+<button class="tile" data-type="photo" data-name="مدينة ليلًا"><img loading="lazy" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=420&h=500&fit=crop" alt="مدينة ليلًا"></button>
+</div>
+<div class="empty" id="empty">لا توجد نتائج مطابقة.</div>
+<div class="notice">هذه معاينة تفاعلية لواجهة الهاتف. الصور المعروضة تجريبية وليست ملفات من جهازك؛ وظائف أندرويد الأصلية مثل قراءة MediaStore والخزنة الآمنة تتطلب تشغيل التطبيق على أندرويد.</div>
+</section>
+<nav class="bottomnav" aria-label="التنقل الرئيسي">
+<button class="navitem active" data-nav="الرئيسية"><span>▦</span><span>المعرض</span></button>
+<button class="navitem" data-nav="الألبومات"><span>▤</span><span>الألبومات</span></button>
+<button class="navitem" data-nav="المفضلة"><span>♡</span><span>المفضلة</span></button>
+<button class="navitem" data-nav="الإعدادات"><span>⚙</span><span>الإعدادات</span></button>
+</nav>
+<div class="footer">MIRRO · معاينة واجهة تجريبية</div>
+</main>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="عرض الصورة"><div class="viewer"><div class="viewerhead"><strong id="viewerTitle">معاينة الصورة</strong><button id="close">إغلاق ✕</button></div><img id="viewerImg" alt="الصورة المحددة"></div></div>
+<script>
+const tiles=[...document.querySelectorAll('.tile')], filters=[...document.querySelectorAll('.filter')], search=document.querySelector('#search'), empty=document.querySelector('#empty');
+let activeFilter='all', activeAlbum='';
+function update(){let shown=0;const q=search.value.trim().toLowerCase();tiles.forEach(t=>{const okType=activeFilter==='all'||t.dataset.type===activeFilter;const okText=(t.dataset.name||'').toLowerCase().includes(q);const okAlbum=!activeAlbum||activeAlbum==='كل الصور'||(activeAlbum==='المفضلة'?t.dataset.name.includes('غروب')||t.dataset.name.includes('بحيرة'):activeAlbum==='الكاميرا'?t.dataset.type==='photo':true);const visible=okType&&okText&&okAlbum;t.classList.toggle('hidden',!visible);if(visible)shown++});empty.style.display=shown?'none':'block';document.querySelector('#mediaTitle').textContent=activeAlbum|| (activeFilter==='video'?'الفيديوهات':activeFilter==='photo'?'الصور':'الأحدث')}
+filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.classList.toggle('active',x===b));activeFilter=b.dataset.filter;update()}));
+search.addEventListener('input',update);
+document.querySelectorAll('.album').forEach(b=>b.addEventListener('click',()=>{activeAlbum=b.dataset.album;document.querySelectorAll('.album').forEach(x=>x.style.borderColor=x===b?'#b9cbb0':'#292929');update();document.querySelector('.media-section').scrollIntoView({behavior:'smooth',block:'start'})}));
+document.querySelector('#allAlbums').addEventListener('click',()=>{activeAlbum='';document.querySelectorAll('.album').forEach(x=>x.style.borderColor='#292929');update()});
+document.querySelectorAll('.tile').forEach(t=>t.addEventListener('click',()=>{const im=t.querySelector('img');document.querySelector('#viewerImg').src=im.src;document.querySelector('#viewerTitle').textContent=t.dataset.name;document.querySelector('#modal').classList.add('open')}));
+function closeModal(){document.querySelector('#modal').classList.remove('open')}document.querySelector('#close').addEventListener('click',closeModal);document.querySelector('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelector('#sort').addEventListener('click',()=>{const g=document.querySelector('#grid');[...g.children].reverse().forEach(n=>g.appendChild(n));document.querySelector('#sort').textContent='تم الترتيب ✓'});
+document.querySelectorAll('.navitem').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.navitem').forEach(x=>x.classList.toggle('active',x===b));if(b.dataset.nav==='الألبومات'){document.querySelector('.albumrow').scrollIntoView({behavior:'smooth',block:'center'})}else if(b.dataset.nav==='المفضلة'){activeAlbum='المفضلة';update();document.querySelector('.media-section').scrollIntoView({behavior:'smooth'})}else if(b.dataset.nav==='الإعدادات'){alert('هذه معاينة واجهة فقط. إعدادات أندرويد الأصلية تتوفر داخل التطبيق.')}else{activeAlbum='';update();window.scrollTo({top:0,behavior:'smooth'})}}));
+document.querySelector('#settings').addEventListener('click',()=>alert('هذه معاينة واجهة فقط. إعدادات أندرويد الأصلية تتوفر داخل التطبيق.'));
+</script>
+</body></html>
